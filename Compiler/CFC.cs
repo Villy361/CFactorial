@@ -4,7 +4,7 @@ namespace Comp
 {
     class CFC
     {
-        static void Main(string[] args)
+        static void Mai(string[] args)
         {
             while (true)
             {
