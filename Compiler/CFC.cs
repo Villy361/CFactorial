@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 
 namespace Comp
 {
     class CFC
     {
-        static void Mai(string[] args)
+        static void Main(string[] args)
         {
             while (true)
             {
