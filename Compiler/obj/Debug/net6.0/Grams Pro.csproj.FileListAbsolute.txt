@@ -13,3 +13,18 @@ C:\Users\aiden\Grams Pro\obj\Debug\net6.0\refint\Grams Pro.dll
 C:\Users\aiden\Grams Pro\obj\Debug\net6.0\Grams Pro.pdb
 C:\Users\aiden\Grams Pro\obj\Debug\net6.0\Grams Pro.genruntimeconfig.cache
 C:\Users\aiden\Grams Pro\obj\Debug\net6.0\ref\Grams Pro.dll
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\bin\Debug\net6.0\Grams Pro.exe
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\bin\Debug\net6.0\Grams Pro.deps.json
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\bin\Debug\net6.0\Grams Pro.runtimeconfig.json
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\bin\Debug\net6.0\Grams Pro.dll
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\bin\Debug\net6.0\Grams Pro.pdb
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.csproj.AssemblyReference.cache
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.AssemblyInfoInputs.cache
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.AssemblyInfo.cs
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.csproj.CoreCompileInputs.cache
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.dll
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\refint\Grams Pro.dll
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.pdb
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\Grams Pro.genruntimeconfig.cache
+C:\Users\aiden\OneDrive\Documents\GitHub\CFactorial\Compiler\obj\Debug\net6.0\ref\Grams Pro.dll

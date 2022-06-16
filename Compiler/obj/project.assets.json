@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aiden\\Grams Pro\\Grams Pro.csproj",
+      "projectUniqueName": "C:\\Users\\aiden\\OneDrive\\Documents\\GitHub\\CFactorial\\Compiler\\Grams Pro.csproj",
       "projectName": "Grams Pro",
-      "projectPath": "C:\\Users\\aiden\\Grams Pro\\Grams Pro.csproj",
+      "projectPath": "C:\\Users\\aiden\\OneDrive\\Documents\\GitHub\\CFactorial\\Compiler\\Grams Pro.csproj",
       "packagesPath": "C:\\Users\\aiden\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aiden\\Grams Pro\\obj\\",
+      "outputPath": "C:\\Users\\aiden\\OneDrive\\Documents\\GitHub\\CFactorial\\Compiler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aiden\\AppData\\Roaming\\NuGet\\NuGet.Config"
