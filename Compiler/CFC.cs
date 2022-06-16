@@ -2,7 +2,7 @@
 
 namespace Comp
 {
-    class AC
+    class CFC
     {
         static void Main(string[] args)
         {
