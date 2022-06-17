@@ -1,6 +1,4 @@
-using System;
-
-namespace Comp
+﻿namespace Comp
 {
     class CFC
     {
@@ -37,7 +35,9 @@ namespace Comp
         OpenParenthesisToken,
         CloseParenthesisToken,
         BadToken,
-        EndOfFileToken
+        EndOfFileToken,
+        NumberExpression,
+        BinaryExpression
     }
     class SyntaxToken
     {
@@ -121,5 +121,64 @@ namespace Comp
             
             return new SyntaxToken(SyntaxKind.BadToken, _position++, _text.Substring(_position - 1), null);
         }
+    }
+    abstract class SyntaxNode
+    {
+        public abstract SyntaxKind Kind { get; }
+    }
+    abstract class ExpressionSyntax : SyntaxNode
+    {
+    }
+    sealed class  NumberExpressionSyntax : ExpressionSyntax
+    {
+        public NumberExpressionSyntax(SyntaxToken numberToken)
+        {
+            NumberToken = numberToken;
+        }
+        public override SyntaxKind Kind => SyntaxKind.NumberExpression;
+        public SyntaxToken NumberToken { get; }
+    }
+    sealed class BinaryExpressionSyntax : ExpressionSyntax
+    {
+        public BinaryExpressionSyntax(ExpressionSyntax left, SyntaxNode operatorToken, ExpressionSyntax right)
+        {
+            Left = left;
+            OperatorToken = operatorToken;
+            Right = right;
+        }
+        public override SyntaxKind Kind => SyntaxKind.BinaryExpression;
+        public ExpressionSyntax Left { get; }
+        public SyntaxNode OperatorToken { get; }
+        public ExpressionSyntax Right { get; }
+    }
+    class Parser
+    {
+        private readonly SyntaxToken[] _tokens;
+        private int _position;
+
+        public Parser(string text)
+        {
+            var tokens = new List<SyntaxToken>();
+            var lexer = new Lexer(text);
+            SyntaxToken token;
+            do
+            {
+                token = lexer.NextToken();
+                if (token.Kind != SyntaxKind.WhiteSpaceToken && token.Kind != SyntaxKind.BadToken)
+                {
+                    tokens.Add(token);
+                }
+            }while (token.Kind != SyntaxKind.EndOfFileToken);
+
+            _tokens = tokens.ToArray();
+        }
+        private SyntaxToken Peek(int offset)
+        {
+            var index = _position + offset;
+            if (index >= _tokens.Length)
+                return _tokens[_tokens.Length - 1];
+            return _tokens[index];
+        }
+        private SyntaxToken Current => Peek(0);
     }
 }
