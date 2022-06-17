@@ -1,0 +1,19 @@
+{
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.suggest.showStatusBar": false,
+    "editor.wordBasedSuggestions": true,
+    "files.insertFinalNewline": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "csharp.inlayHints.parameters.enabled": false,
+    "csharp.inlayHints.parameters.forIndexerParameters": false,
+    "csharp.inlayHints.parameters.forLiteralParameters": false,
+    "csharp.inlayHints.parameters.forObjectCreationParameters": false,
+    "csharp.inlayHints.parameters.forOtherParameters": false,
+    "csharp.inlayHints.parameters.suppressForParametersThatDifferOnlyBySuffix": false,
+    "csharp.inlayHints.parameters.suppressForParametersThatMatchArgumentName": false,
+    "csharp.inlayHints.parameters.suppressForParametersThatMatchMethodIntent": false,
+    "csharp.inlayHints.types.enabled": false,
+    "csharp.inlayHints.types.forImplicitObjectCreation": false,
+    "csharp.inlayHints.types.forImplicitVariableTypes": false,
+    "csharp.inlayHints.types.forLambdaParameterTypes": false
+}
