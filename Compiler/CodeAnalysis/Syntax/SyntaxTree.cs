@@ -1,4 +1,4 @@
-namespace CFactorial.CodeAnalysis
+namespace CFactorial.CodeAnalysis.Syntax
 {
     sealed class SyntaxTree
     {
