@@ -1,10 +1,12 @@
 ﻿using CFactorial.CodeAnalysis;
+using CFactorial.CodeAnalysis.Binding;
+using CFactorial.CodeAnalysis.Syntax;
 
 namespace CFactorial
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             bool showTree = false;
             while (true)
@@ -25,29 +27,36 @@ namespace CFactorial
                     continue;
                 }
                 var syntaxTree = SyntaxTree.Parse(line);
+                var binder = new Binder();
+                var boundExpression = binder.BindExpression(syntaxTree.Root);
+                var diagnostics = syntaxTree.Diagnostics.Concat(binder.Diagnostics).ToArray();
                 if (showTree)
                 {
-                    var color = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.DarkGray;
                     PrettyPrint(syntaxTree.Root);
-                    Console.ForegroundColor = color;
+                    Console.ResetColor();
                 }
-                if (!syntaxTree.Diagnostics.Any())
+                if (!diagnostics.Any())
                 {
-                    var e = new Evaluator(syntaxTree.Root);
+                    var e = new Evaluator(boundExpression);
                     var result = e.Evaluate();
                     Console.WriteLine(result);
                 }
                 else
                 {
-                    var color = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     foreach (var diacnostic in syntaxTree.Diagnostics)
                         Console.WriteLine(diacnostic);
-                    Console.ForegroundColor = color;
+                    Console.ResetColor();
                 }
             }
         }
+
+        private static IReadOnlyList<string> GetDiagnostics(SyntaxTree syntaxTree)
+        {
+            return syntaxTree.Diagnostics;
+        }
+
         static void PrettyPrint(SyntaxNode node, string indent = "", bool isLast = true)
         {
             var marker = isLast ? "└──" : "├──";
@@ -60,7 +69,7 @@ namespace CFactorial
                 Console.Write(t.Value);
             }
             Console.WriteLine();
-            indent += isLast ? "    " : "|   ";
+            indent += isLast ? "   " : "|  ";
             var lastchild = node.GetChildren().LastOrDefault();
             foreach (var child in node.GetChildren())
                 PrettyPrint(child, indent, child == lastchild);
